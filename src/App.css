@@ -1,6 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-*{
+/* Scroll */
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #BC0214 #141414;
+  }
+  
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: #141414;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #141414;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #141414;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #BC0214;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #BC0214;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #BC0214;
+  }
+
+  /* Fim do scroll */
+
+* { 
     box-sizing: border-box;
 }
 body {
@@ -12,20 +54,56 @@ body {
 .lists {
     margin-top: -100px;
 }
-footer {
-    margin: 50px 0;
-    text-align: center;
-}
 .loading {
     height: 100vh;
+    width: 100vw;
     position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
     z-index: 99;
     background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    padding-left: 0;
+}
+.social li{
+    margin: 0 10px;
+}
+.social a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+.social a i{
+    font-size: 1.8rem;
+    width: 100%;
+    height: 100%;
+    transition: ;
+}
+.social a:hover i{
+    color: #141414;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.loading img {
+    width: 50vw;
+}
+@media (max-width:760px) {
+    .loading img {
+        width: 100vw;
+    }
 }

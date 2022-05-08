@@ -5,6 +5,7 @@ import MovieRow from './components/MovieRow';
 import MainMovie from './components/MainMovie';
 import Header from './components/Header';
 
+
 // eslint-disable-next-line
 export default () => {
 
@@ -59,7 +60,13 @@ export default () => {
       </section>
 
       <footer>
-        Diretos de imagem para Netflix<br/>
+        <ul className="social">
+          <h4>Follow me on   </h4>
+          <li><a href="https://github.com/josafamarengo/" target="_blank" alt="Github" className="github"><i class="fa fa-github-alt"></i></a></li>
+          <li><a href="https://linkedin.com/in/josafamarengo/" target="_blank" alt="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://josafa.hashnode.dev/" target="_blank" alt="Blog"><i class="fa fa-stack"></i></a></li>
+        </ul>
+        Diretos de imagem para Netflix |
         Dados pegos do site Themoviedb.org
       </footer>
       

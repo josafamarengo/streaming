@@ -1,3 +1,5 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 .featured {
     height: 100vh;
 }
@@ -54,23 +56,21 @@
     font-size: 20px;
     font-weight: bold;
     padding: 15px 25px;
-    border-radius: 5px;
     text-decoration: none;
     margin-right: 10px;
     transition: all ease 0.2s;
+    border-radius: 5px;
 }
 .featured--watch {
     background-color: #fff;
     color:#000;
 }
 .featured--myList {
-    background-color: #333;
     color: #fff
 }
 .featured--watch:hover {
-    background-color: red;
+    background-color: #bc0214;
     color: #fff;
-    font-weight:normal;
 }
 .featured--myList:hover {
     background-color: #fff;
@@ -83,23 +83,24 @@
 }
 @media (max-width:760px) {
     .featured{
-        height: 90vh;
+        height: 100vh;
     }
     .featured--name {
         font-size: 40px;
+        margin-right: 10px;
     }
-    featured--info {
+    .featured--info {
         font-size: 16px;
     }
     .featured--description {
-        font-size: 14px;
+        font-size: 16px;
         max-width: 100%;
         margin-right: 30px;
         color: #fff;
     }
     .featured--watch,
     .featured--myList {
-        font-size: 16px;
+        font-size: 18px;
     }
     .featured--genres {
         font-size: 14px;
