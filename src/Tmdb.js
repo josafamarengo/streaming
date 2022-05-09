@@ -12,9 +12,19 @@ export default {
     getHomeList: async () => {
         return [
             {
+                slug: 'trending',
+                title: 'Em alta',
+                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=200`)
+            },
+            {
+                slug: 'toprated',
+                title: 'Para maratonar',
+                items: await basicFetch(`/discover/tv?language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=5000`)
+            },
+            {
                 slug: 'originals',
                 title: 'Recomendados para você',
-                items: await basicFetch(`/discover/tv?with_networks=213=language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=2000`)
+                items: await basicFetch(`/discover/tv?with_networks=213&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=2000`)
             },
             {
                 slug: 'action',
@@ -27,9 +37,9 @@ export default {
                 items: await basicFetch(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=2000`)
             },
             {
-                slug: 'comedy',
-                title: 'Comédia',
-                items: await basicFetch(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=10000`)
+                slug: 'drama',
+                title: 'Drama',
+                items: await basicFetch(`/discover/movie?with_genres=18&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=1000`)
             },
             {
                 slug: 'romance',

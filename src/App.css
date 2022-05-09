@@ -70,34 +70,42 @@ body {
 }
 footer {
     text-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 2em;;
 }
 .social {
+   color: #f4f4f4; 
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    margin: 3rem 0 3rem 0;
     padding-left: 0;
 }
 .social li{
     margin: 0 10px;
 }
 .social a{
-    text-decoration: none;
-    color: white;
+    text-decoration: none;   
     padding: 5px;
 }
 .social a i{
     font-size: 1.8rem;
     width: 100%;
     height: 100%;
-    transition: ;
+    transition: all ease 0.2s ;
+    border-radius: 5px;
 }
-.social a:hover i{
+.social .github i {
     color: #141414;
     background-color: #fff;
-    border-radius: 3px;
+}
+.social .linkedin i {
+    color: #fff;
+    background-color: #0a66c2;
+}
+.social a:hover i{
+    color: #fff;
+    background-color: transparent;
 }
 .loading img {
     width: 50vw;

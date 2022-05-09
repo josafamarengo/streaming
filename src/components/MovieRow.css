@@ -45,6 +45,7 @@
 }
 .movieRow--item img {
     width: 100%;
+    border-radius: 25px;
     transform: scale(0.9);
     transition: all ease 0.2s;
     -webkit-filter: grayscale(20%) ;
@@ -53,8 +54,8 @@
 }
 .movieRow--item img:hover {
     transform: scale(1);
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
+    -webkit-filter: grayscale(0) brightness(105%);
+    filter: grayscale(0) brightness(105%);
     -moz-filter: grayscale(0);
 }
 @media (max-width:760px) {

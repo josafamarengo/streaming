@@ -30,7 +30,15 @@
 }
 .featured--points {
     display: inline-block;
-    color: #46d369;
+    color: #141414;
+    background-color: #46d369;
+    font-size: 20px;
+    font-weight: bold;
+    width: 1.8em;
+    height: 1.4em;
+    border-radius: 10%;
+    text-align: center;
+    line-height: 1.4em;
     margin-right: 15px;
 }
 .featured--year {
@@ -43,7 +51,7 @@
 }
 .featured--description {
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 18px;
     color:#999;
     max-width: 30%;
 }
@@ -60,21 +68,24 @@
     margin-right: 10px;
     transition: all ease 0.2s;
     border-radius: 5px;
+    border: 1px solid transparent;
 }
 .featured--watch {
-    background-color: #fff;
-    color:#000;
-}
-.featured--myList {
-    color: #fff
-}
-.featured--watch:hover {
     background-color: #bc0214;
     color: #fff;
 }
-.featured--myList:hover {
+.featured--myList {
     background-color: #fff;
     color: #000;
+}
+.featured--watch:hover {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.featured--myList:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
 }
 .featured--genres {
     margin-top: 15px;
@@ -83,7 +94,7 @@
 }
 @media (max-width:760px) {
     .featured{
-        height: 100vh;
+        height: 90vh;
     }
     .featured--name {
         font-size: 40px;
@@ -91,6 +102,11 @@
     }
     .featured--info {
         font-size: 16px;
+    }
+    .featured--points {
+        font-size: 16px;
+        background-color: transparent;
+        color: #46d369;
     }
     .featured--description {
         font-size: 16px;
