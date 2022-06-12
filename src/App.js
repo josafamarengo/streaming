@@ -66,7 +66,6 @@ export default () => {
           <li><a href="https://linkedin.com/in/josafamarengo/"  alt="Linkedin" className="linkedin"><i class="fa fa-linkedin"></i></a></li>
           <li><a href="https://josafa.hashnode.dev/" alt="Blog"><i class="fa fa-stack"></i></a></li>
         </ul>
-        Diretos de imagem para Netflix |
         Dados pegos do site Themoviedb.org
       </footer>
       

@@ -5,6 +5,18 @@ import './MainMovie.css';
 export default ({item}) => {
     console.log(item);
 
+    let largura = window.innerWidth 
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+    let capa = {}
+    if(largura<800){
+        capa = `w500${item.poster_path}`;
+    }
+    else{
+        capa = `original${item.backdrop_path}`;
+    }
+
+
     let firstDate = new Date(item.first_air_date);
     let genres = [];
     for(let i in item.genres) {
@@ -19,8 +31,9 @@ export default ({item}) => {
     return (
         <section className="featured" style={{
             backgroudSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center top',
+            backgroundImage: `url(https://image.tmdb.org/t/p/${capa})`
         }}>
             <div className="featured--vertical">
                 <div className="featured--horizontal">

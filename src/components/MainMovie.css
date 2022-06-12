@@ -11,7 +11,7 @@
 .featured--horizontal {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right, #111 30%, transparent 70%);
+    background: linear-gradient(to right, #111 20%, transparent 80%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,17 +96,26 @@
     .featured{
         height: 90vh;
     }
+    .featured--vertical{
+        background: linear-gradient(to top, #111 20%, transparent 80%);
+    }
+    .featured--horizontal{
+        background:rgba(0,0,0,0.5);
+    }
     .featured--name {
         font-size: 40px;
+        text-transform: uppercase;
         margin-right: 10px;
+        margin-top: 60px;
     }
     .featured--info {
-        font-size: 16px;
+        font-size: 18px;
+        text-transform: uppercase;
     }
     .featured--points {
-        font-size: 16px;
-        background-color: transparent;
-        color: #46d369;
+        font-size: 24px;
+        background-color: #46d369;
+        color: #000;
     }
     .featured--description {
         font-size: 16px;
@@ -117,8 +126,17 @@
     .featured--watch,
     .featured--myList {
         font-size: 18px;
+        font-weight:100;
+        padding: 10px 25px;
+    }
+    .featured--myList{
+        background-color: transparent;
+        color: #fff;
     }
     .featured--genres {
-        font-size: 14px;
+        font-size: 16px;
+    }
+    .featured--genres strong{
+        display: none;
     }
 }

@@ -34,6 +34,7 @@
 .movieRow--listarea {
     overflow-x: hidden;
     padding-left: 30px;
+    touch-action: pan-x;
 }
 .movieRow--list {
     transition: all ease 0.5s;
