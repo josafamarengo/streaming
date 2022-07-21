@@ -40,6 +40,7 @@
     transition: all ease 0.5s;
 }
 .movieRow--item {
+    position: relative;
     display: inline-block;
     width: 150px;
     cursor: pointer;

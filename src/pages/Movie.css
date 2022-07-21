@@ -1,0 +1,26 @@
+.movie-page {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10rem auto;
+}
+
+.movie-page .movie-card img,
+.movie-page .movie-card h2,
+.movie-page .movie-card p {
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 400px;
+}

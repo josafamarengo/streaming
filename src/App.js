@@ -12,7 +12,7 @@ export default () => {
   const [ movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);
- 
+
   useEffect(()=>{
     const loadAll = async () => {
       let list = await Tmdb.getHomeList();
@@ -64,7 +64,6 @@ export default () => {
           <h4>Follow me on   </h4>
           <li><a href="https://github.com/josafamarengo/" alt="Github" className="github"><i class="fa fa-github-alt"></i></a></li>
           <li><a href="https://linkedin.com/in/josafamarengo/"  alt="Linkedin" className="linkedin"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="https://josafa.hashnode.dev/" alt="Blog"><i class="fa fa-stack"></i></a></li>
         </ul>
         Dados pegos do site Themoviedb.org
       </footer>
