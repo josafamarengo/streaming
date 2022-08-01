@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-/* Scroll */
-
 /* Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: #BC0214 #141414;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
   /* Chrome, Edge and Safari */
   *::-webkit-scrollbar {
-    width: 10px;
     width: 10px;
   }
   *::-webkit-scrollbar-track {
@@ -40,11 +40,6 @@
     background-color: #BC0214;
   }
 
-  /* Fim do scroll */
-
-* { 
-    box-sizing: border-box;
-}
 body {
     background-color: #111;
     color: #fff;
@@ -70,7 +65,7 @@ body {
 }
 footer {
     text-align: center;
-    margin-bottom: 2em;;
+    margin-bottom: 2em;
 }
 .social {
    color: #f4f4f4; 
@@ -78,7 +73,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0;
     padding-left: 0;
 }
 .social li{

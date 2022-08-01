@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Header from '../components/Header';
-import MovieCard from "../components/MovieCard";
+import Header from '../../components/Header';
+import MovieCard from "../../components/MovieCard";
 
 import "./Movie.css";
 
@@ -12,14 +12,14 @@ const apiKey = 'f4a6dcbf58552f9f7766293b247a8a38';
 
 const Movie = () => {
   const { id } = useParams();
-  const [movie, setMovie] = useState(null);
+  const [serie, setSerie] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);
 
-  const getMovie = async (url) => {
+  const getSerie = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
     console.log(data);
-    setMovie(data);
+    setSerie(data);
   };
 
   useEffect(()=>{
@@ -39,26 +39,22 @@ const Movie = () => {
   }, []);
 
   useEffect(() => {
-    const pathMovie = `movie/${id}?api_key=${apiKey}&language=pt-BR`;
-    const pathSerie = `tv/${id}?api_key=${apiKey}&language=pt-BR`;
-    const movieUrl = `${moviesURL}${movie.media_type === 'movie' ? pathMovie : pathSerie}`;
-    console.log(movieUrl);
-    getMovie(movieUrl);
+    getSerie(`${moviesURL}tv/${id}?api_key=${apiKey}`);
   }, []);
 
   return (
-    <div className="movie-page">
+    <div className="serie-page">
       <Header black={blackHeader} />
-      {movie && (
+      {serie && (
         <>
-          <MovieCard movie={movie} showLink={false} />
+          <MovieCard movie={serie} showLink={false} />
           
-          <div className="movie-info">
-            <h2>{movie.title}</h2>
-            <p className="tagline">{movie.tagline}</p>
-            <p className="overview">{movie.overview}</p>
-            <p className="runtime">{movie.runtime} min</p>
-            <p className="year"><span>Ano: </span>{movie.release_date.split('-')[0]}</p>
+          <div className="serie-info">
+            <h2>{serie.title}</h2>
+            <p className="tagline">{serie.tagline}</p>
+            <p className="overview">{serie.overview}</p>
+            <p className="runtime">{serie.runtime} min</p>
+            <p className="year"><span>Ano: </span>{serie.release_date.split('-')[0]}</p>
           </div>
         </>
       )}

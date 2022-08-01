@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import Header from '../components/Header';
+import Header from '../../components/Header';
 //import MovieCard from '../components/MovieCard';
 import './Search.css';
 
