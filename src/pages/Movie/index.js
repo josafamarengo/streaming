@@ -47,14 +47,17 @@ const Movie = () => {
       <Header black={blackHeader} />
       {movie && (
         <>
-          <MovieCard movie={movie} showLink={false} />
+          <MovieCard movie={movie} showLink={false} className="movie-card" />
           
           <div className="movie-info">
             <h2>{movie.title}</h2>
+            <div className="details">
+              <p className="rating">{movie.vote_average.toFixed(1)}</p>
+              <p className="runtime">{movie.runtime} min</p>
+              <p className="year">{movie.release_date.split('-')[0]}</p>
+            </div>
             <p className="tagline">{movie.tagline}</p>
             <p className="overview">{movie.overview}</p>
-            <p className="runtime">{movie.runtime} min</p>
-            <p className="year"><span>Ano: </span>{movie.release_date.split('-')[0]}</p>
           </div>
         </>
       )}

@@ -18,17 +18,19 @@ export default ({black}) => {
 
     return (
         <header className={black ? 'black' : ''}>
-            <div className="header--logo">
-                <Link to="/">
-                    <img src="https://www.freepnglogos.com/uploads/red-netflix-logo-text-png-3.png" alt="Netflix" />
-                </Link>
-            </div>
-            <div className="nav-bar">
-                <ul className="nav-list">
-                    <li>Filmes</li>
-                    <li>Séries</li>
-                    <li>Minha Lista</li>
-                </ul>
+            <div className="header__container">
+                <div className="header--logo">
+                    <Link to="/">
+                        <img src="https://www.freepnglogos.com/uploads/red-netflix-logo-text-png-3.png" alt="Netflix" />
+                    </Link>
+                </div>
+                <div className="nav-bar">
+                    <ul className="nav-list">
+                        <li>Filmes</li>
+                        <li>Séries</li>
+                        <li>Minha Lista</li>
+                    </ul>
+                </div>
             </div>
             <form className="search-bar" onSubmit={handleSubmit}>
                 <input 

@@ -1,6 +1,7 @@
 [![Access the site](header.svg)](https://streaming-site.netlify.app)
 
 ---
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/josafamarengo/streaming?style=for-the-badge)
 ## Table of contents
 
 - [General Info](#general-info)

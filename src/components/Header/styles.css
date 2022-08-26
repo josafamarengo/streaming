@@ -16,6 +16,12 @@ header {
 header.black {
     background-color: #141414;
 }
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+}
 .header--logo {
   height: 1.8rem;
 }
@@ -25,13 +31,14 @@ header.black {
 .nav-bar .nav-list{
   display: flex;
   justify-content: space-around;
-  width: 40vw;
+  width: 20vw;
   max-width: 600px;
 }
 .nav-list li{
   list-style: none;
   cursor: pointer;
   color: #ccc;
+  transition: color .4s;
 }
 .nav-list li:hover{
   color: #fff;
@@ -199,7 +206,20 @@ input[type="checkbox"] {
   transition-delay: 0.6s;
   transform: translateX(-100px);
 }
-@media (max-width:760px){
+
+@media (max-width: 1200px) {
+  .nav-bar{
+    display: none;
+  }
+  .menu-btn{
+    display: block;
+  }
+  .search-bar {
+    margin-right: 15rem;
+  }
+}
+
+@media (max-width:765px){
   header{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, transparent 90%);
     transition: all ease 0.3s;
@@ -207,16 +227,10 @@ input[type="checkbox"] {
   header.black{
     opacity: 0;
   }
-  .nav-bar{
-    display: none;
-  }
   .search-bar{
     width: 90vw;
     margin-top: 150px;
     left: 5vw;
     position: absolute;
-  }
-  .menu-btn{
-    display: block;
   }
 }

@@ -3,3 +3,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+.results h1 {
+    margin: 10rem auto;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 8rem auto;
+}
+.movies img {
+    width: 200px;
+    border-radius: 15px;
+}
+.movies h2 {
+    font-size: 1.2em;
+    margin-top:1rem;
+}
+.movies p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aliceblue; */
+    width: 200px;
+    height: 450px;
+}
