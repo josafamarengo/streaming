@@ -19,23 +19,16 @@ export default ({black}) => {
     return (
         <header className={black ? 'black' : ''}>
             <div className="header__container">
-                <div className="header--logo">
+                <div>
                     <Link to="/">
-                        <img src="https://www.freepnglogos.com/uploads/red-netflix-logo-text-png-3.png" alt="Netflix" />
+                        <h1 className="header--logo">Movies</h1>
                     </Link>
-                </div>
-                <div className="nav-bar">
-                    <ul className="nav-list">
-                        <li>Filmes</li>
-                        <li>Séries</li>
-                        <li>Minha Lista</li>
-                    </ul>
                 </div>
             </div>
             <form className="search-bar" onSubmit={handleSubmit}>
                 <input 
                     type="text" 
-                    placeholder="Busque por um filme ou série."
+                    placeholder="Busque por um filme"
                     className="search-input"
                     onChange={e => setSearch(e.target.value)}
                     value={search}

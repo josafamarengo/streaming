@@ -1,7 +1,7 @@
 .movie-card img {
-    width: 250px;
+    width: min(24rem, 90%);
     border-radius: 15px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5), 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5), 0 5px 10px rgba(0, 0, 0, 0.5)
 }
 
 .movie-card {

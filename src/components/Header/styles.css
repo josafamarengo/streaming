@@ -23,7 +23,11 @@ header.black {
     width: 30vw;
 }
 .header--logo {
-  height: 1.8rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .header--logo img {
   height: 100%;

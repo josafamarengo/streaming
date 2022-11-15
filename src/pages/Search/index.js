@@ -21,7 +21,7 @@ const Search = () => {
   };
 
   useEffect(() => {
-    const searchWithQueryURL = `${searchURL}?api_key=${apiKey}&query=${query}&language=pt-BR&sort_by=vote_average.desc`;
+    const searchWithQueryURL = `${searchURL}?api_key=${apiKey}&query=${query}&language=pt-BR&sort_by=vote_average.desc&vote_count.gte=500`;
     getSearchedMovies(searchWithQueryURL);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
@@ -46,18 +46,14 @@ const Search = () => {
     <>
       <Header black={blackHeader} />
       <div className="results">
-        <h1>Resultados para: {query}</h1>
+        <h1>Resultados para: <span>{query}</span></h1>
         <div className="movies">
           {movies.map((movie) => (
             <Link to={`/movie/${movie.id}`}>
               <div key={movie.id} className="movie">
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-                <div className="movie-info">
+                <div className="movie-search-info">
                   <h2>{movie.title}</h2>
-                  <div className="details">
-                    <p className="rating">{movie.vote_average.toFixed(1)}</p>
-                    <p className="year">{movie.release_date.split('-')[0]}</p>
-                  </div>
                 </div>
               </div>
             </Link>

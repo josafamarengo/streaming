@@ -46,8 +46,9 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
 .lists {
-    margin-top: -100px;
+    margin-top: 5rem;
 }
 .loading {
     height: 100vh;
@@ -108,5 +109,8 @@ footer {
 @media (max-width:760px) {
     .loading img {
         width: 100vw;
+    }
+    .lists {
+        margin-top: 10rem;
     }
 }

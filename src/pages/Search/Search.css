@@ -5,6 +5,11 @@
 }
 .results h1 {
     margin: 10rem auto;
+    text-align: center;
+}
+
+.results h1 span {
+    color: #f00;
 }
 
 .movies {
@@ -18,18 +23,18 @@
 }
 .movies h2 {
     font-size: 1.2em;
-    margin-top:1rem;
-}
-.movies p {
-    font-size: 1rem;
-    font-weight: 400;
+    text-align: center;
+    color: #fff;
 }
 .movie {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    /* background-color: aliceblue; */
     width: 200px;
-    height: 450px;
+}
+
+.movie-search-info {
+    margin: 0.5rem auto 4rem auto;
+    width: 200px;
 }

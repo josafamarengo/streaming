@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 
 import Header from '../../components/Header';
 import MovieCard from "../../components/MovieCard";
+import Cover from "../../components/Cover";
+
+import { AiOutlineStar, AiOutlineClockCircle, AiOutlineCalendar } from "react-icons/ai";
 
 import "./Movie.css";
 
@@ -46,20 +49,38 @@ const Movie = () => {
     <div className="movie-page">
       <Header black={blackHeader} />
       {movie && (
-        <>
-          <MovieCard movie={movie} showLink={false} className="movie-card" />
-          
-          <div className="movie-info">
-            <h2>{movie.title}</h2>
-            <div className="details">
-              <p className="rating">{movie.vote_average.toFixed(1)}</p>
-              <p className="runtime">{movie.runtime} min</p>
-              <p className="year">{movie.release_date.split('-')[0]}</p>
+        <div class="movie">
+          <Cover movie={movie} className="movie-cover"/>
+
+          <div class="movie-container">
+
+            <MovieCard movie={movie} showLink={false} className="movie-card" />
+            
+            <div className="movie-info">
+              <h2 class="movie-title">{movie.title}</h2>
+              <div className="details">
+                <div className="detail">
+                  <AiOutlineStar className="icon" />
+                  <p className="rating">{movie.vote_average.toFixed(1)}</p>
+                </div>
+                <div className="detail">
+                  <AiOutlineClockCircle className="icon" />
+                  <p className="runtime">{movie.runtime} min</p>
+                </div>
+                <div className="detail">
+                  <AiOutlineCalendar className="icon" />
+                  <p className="year">{movie.release_date.split('-')[0]}</p>
+                </div>
+              </div>
+              <div className="genres">
+                {movie.genres.map((genre) => (
+                  <p className="genre">{genre.name}</p>
+                ))}
+              </div>
+              <p className="overview">{movie.overview}</p>
             </div>
-            <p className="tagline">{movie.tagline}</p>
-            <p className="overview">{movie.overview}</p>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

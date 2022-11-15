@@ -14,27 +14,22 @@ export default {
             {
                 slug: 'trending',
                 title: 'Em alta',
-                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=200`)
+                items: await basicFetch(`/trending/movie/week?language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=200`)
             },
             {
                 slug: 'toprated',
-                title: 'Para maratonar',
-                items: await basicFetch(`/discover/tv?language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=5000`)
-            },
-            {
-                slug: 'originals',
-                title: 'Recomendados para você',
-                items: await basicFetch(`/discover/tv?with_networks=213&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=2000`)
+                title: 'Clássicos',
+                items: await basicFetch(`/discover/movie?language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=5000`)
             },
             {
                 slug: 'action',
                 title: 'Ação',
-                items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=15000`)
+                items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=2000`)
             },
             {
                 slug: 'horror',
                 title: 'Terror',
-                items: await basicFetch(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=2000`)
+                items: await basicFetch(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=1000`)
             },
             {
                 slug: 'drama',
@@ -44,12 +39,12 @@ export default {
             {
                 slug: 'romance',
                 title: 'Romance',
-                items: await basicFetch(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=2000`)
+                items: await basicFetch(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=500`)
             },
             {
                 slug: 'documentary',
                 title: 'Documentários',
-                items: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=200`)
+                items: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}&sort_by=vote_average.desc&vote_count.gte=50`)
             },
         ];
     },
